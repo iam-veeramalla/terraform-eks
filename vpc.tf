@@ -6,7 +6,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "abhi-eks-${random_string.suffix.result}"
+  cluster_name = "hari-eks-${random_string.suffix.result}"
 }
 
 resource "random_string" "suffix" {
@@ -36,6 +36,7 @@ module "vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/elb"                      = "1"
   }
+#this is to test feature branch
 
   private_subnet_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
