@@ -23,7 +23,7 @@ output "oidc_provider_arn" {
 }
 
 #output "zz_update_kubeconfig_command" {
-  # value = "aws eks update-kubeconfig --name " + module.eks.cluster_id
+# value = "aws eks update-kubeconfig --name " + module.eks.cluster_id
 #  value = format("%s %s %s %s", "aws eks update-kubeconfig --name", module.eks.cluster_id, "--region", var.aws_region)
 #}
 
